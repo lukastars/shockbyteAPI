@@ -19,6 +19,22 @@ export default {
 
 <style>
 @import '~vue-sliding-pagination/dist/style/vue-sliding-pagination.css';
+
+.c-sliding-pagination__page {
+  padding: 0.6em;
+}
+.c-sliding-pagination__list-element {
+  padding: 0;
+  background: #9b76f1;
+}
+.c-sliding-pagination__list-element--active:hover {
+  color: #fff;
+  background: #3922af;
+  cursor: default;
+}
+.c-sliding-pagination__list-element--active {
+  background: #3922af;
+}
 body {
   background-color: #fff;
 }
