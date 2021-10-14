@@ -60,7 +60,6 @@ export default {
           `https://600f10ec6c21e1001704e67a.mockapi.io/api/v1/stats`
         );
         const data = response.data;
-        console.log(data.length);
         const perPage = store.state.perPage;
         const totalPages = Math.ceil(data.length / perPage);
 
