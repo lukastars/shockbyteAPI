@@ -70,10 +70,10 @@ export default {
     upTime() {
       const end = DateTime.now();
       const start = DateTime.fromISO(this.nodeData.up_since);
-      const diff = end.diff(start, ['months', 'days']);
+      const diff = end.diff(start, ['days', 'hours']);
       diff.toObject();
 
-      return `${Math.floor(diff.months)} Months, ${Math.floor(diff.days)} Days`;
+      return `${Math.floor(diff.days)} Days, ${Math.floor(diff.hours)} Hours`;
     },
   },
 };

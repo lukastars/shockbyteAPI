@@ -72,9 +72,13 @@ export default {
     upTime() {
       const end = DateTime.now();
       const start = DateTime.fromISO(store.state.currentNodeData.up_since);
-      const diff = end.diff(start, ['months', 'days']);
+      const diff = end.diff(start, ['days', 'hours', 'minutes', 'seconds']);
       diff.toObject();
-      return `${Math.floor(diff.months)} Months, ${Math.floor(diff.days)} Days`;
+      return `${Math.floor(diff.days)} Days, ${Math.floor(
+        diff.hours
+      )} Hours, ${Math.floor(diff.minutes)} Minutes, ${Math.floor(
+        diff.seconds
+      )} Seconds`;
     },
   },
   methods: {
