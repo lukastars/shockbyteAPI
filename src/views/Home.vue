@@ -81,7 +81,7 @@ export default {
         const data = response.data;
         store.commit('setDisplayedNodesData', data);
         store.commit('changeLoading', false);
-
+        store.commit('changeErrors', false);
         return data;
       } catch (error) {
         store.commit('changeErrors', true);
