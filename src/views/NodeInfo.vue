@@ -84,7 +84,6 @@ export default {
   methods: {
     async getNodeData(id) {
       store.commit('changeLoading', true);
-
       try {
         const response = await axios.get(
           `https://600f10ec6c21e1001704e67a.mockapi.io/api/v1/stats/${id}`
@@ -103,7 +102,7 @@ export default {
   async created() {
     const nodeId = this.getCurrentNodeID;
     const data = await this.getNodeData(nodeId);
-    store.commit('setCurrentNodeData', data);
+    store.commit('setCurrentNodeData', data || {});
   },
 };
 </script>

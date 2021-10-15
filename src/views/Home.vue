@@ -99,8 +99,8 @@ export default {
     const data = await this.getNodesData();
     const displayedData = await this.getDisplayedNodesData();
 
-    store.commit('setNodesData', data);
-    store.commit('setDisplayedNodesData', displayedData);
+    store.commit('setNodesData', data || {});
+    store.commit('setDisplayedNodesData', displayedData || {});
 
     this.updateData();
   },
