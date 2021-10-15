@@ -93,6 +93,7 @@ export default {
         store.commit('changeLoading', false);
         return data;
       } catch (error) {
+        store.commit('changeErrors', true);
         console.error(error);
       }
     },
