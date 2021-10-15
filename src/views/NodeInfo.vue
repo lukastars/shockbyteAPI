@@ -97,12 +97,19 @@ export default {
         console.error(error);
       }
     },
+    async updateData(id) {
+      await setInterval(() => {
+        this.getNodeData(id);
+      }, 30000);
+    },
   },
 
   async created() {
     const nodeId = this.getCurrentNodeID;
     const data = await this.getNodeData(nodeId);
     store.commit('setCurrentNodeData', data || {});
+
+    this.updateData(nodeId);
   },
 };
 </script>
