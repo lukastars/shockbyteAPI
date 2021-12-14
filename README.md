@@ -1,4 +1,4 @@
-# shockbyte
+# ShockByte [Live Demo](https://shockbyte.netlify.app)
 
 ## Project setup
 ```
